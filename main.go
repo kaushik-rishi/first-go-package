@@ -1,8 +1,14 @@
 package fgp
 
-import "fmt"
+import (
+	f "fmt"
+)
+
+func init() {
+	f.Println("init function - [fpg]")
+}
 
 // Println is a simple wrapper around fmt.Println() that adds a prefix
 func Println(a ...interface{}) (n int, err error) {
-	return fmt.Println("[myprint] ", a)
+	return f.Println("[myprint] ", a)
 }
